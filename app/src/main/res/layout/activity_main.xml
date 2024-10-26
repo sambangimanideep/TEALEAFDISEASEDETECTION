@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+
+    <!-- Heading for the page -->
+    <TextView
+        android:id="@+id/headingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="TEA LEAF DISEASE DETECTION"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Card-style container for image display -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageCardView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/headingTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <!-- ImageView to display the image -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Image Display"
+            android:scaleType="centerCrop"
+            android:background="@android:color/darker_gray"
+            android:padding="8dp" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Capture Image Button -->
+
+    <!-- Import from Gallery Button -->
+
+    <!-- TextView to display prediction result -->
+    <Button
+        android:id="@+id/openbutton"
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageCardView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="sans-serif-medium"
+        android:text="Capture Image"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageCardView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="6dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="sans-serif-medium"
+        android:text="Import from Gallery"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/openbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Prediction Result"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/white" />
+</RelativeLayout>
